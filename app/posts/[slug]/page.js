@@ -22,7 +22,7 @@ export default function PostPage({ params }) {
         {post.title}
       </h1>
 
-      {/* YouTube video varsa ÖNCE onu göster */}
+      {/* YouTube video varsa önce onu göster */}
       {post.youtubeId && (
         <div className="aspect-video w-full overflow-hidden rounded-xl border border-slate-800">
           <iframe
@@ -48,14 +48,22 @@ export default function PostPage({ params }) {
       )}
 
       <article className="prose prose-invert prose-slate max-w-none leading-relaxed">
-        <p>{post.description}</p>
+        {post.body && post.body.length > 0 ? (
+          post.body.map((paragraph, index) => (
+            <p key={index} className="mb-4">
+              {paragraph}
+            </p>
+          ))
+        ) : (
+          <p>{post.description}</p>
+        )}
 
         <p className="mt-4 text-sm text-slate-400">
-          Bu yazı VYNEX Tech Hub için hazırlanmış teknik bir özet. Çok yakında
-          bu konu için detaylı adım adım rehber içeriği, tablolar ve şema
-          örnekleri de eklenecek.
+          Bu içerik VYNEX Tech Hub için hazırlanmış teknik bir özet. Zamanla bu
+          sayfaya tablo, ölçüm sonuçları ve detaylı bağlantılar da eklenecek.
         </p>
       </article>
     </main>
   );
 }
+
