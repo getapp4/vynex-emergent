@@ -1,4 +1,4 @@
-export const posts = [
+﻿export const posts = [
   {
     title: "HDMI 2.1 Kablosu Seçim Rehberi",
     description:
@@ -8,40 +8,86 @@ export const posts = [
     cover: "/covers/hdmi21.jpg",
     affiliateKey: "hdmi_ultra",
   },
+
   {
     title: "USB-C E-Marker — Gizli Çip Neden Önemli?",
     description:
-      "E-Marker çipli USB-C kablolar, yüksek watt değerlerinde güvenli ve doğru güç iletimi için kritik rol oynar. Yanlış kablo hem cihazı yavaş şarj eder hem de uzun vadede zarar verebilir.",
+      "E-Marker çipli USB-C kablolar, yüksek watt değerlerinde güvenli ve doğru güç iletimi için kritik rol oynar.",
     slug: "usbc-emarker-240w",
     category: "USB Teknolojileri",
     cover: "/covers/usbc-emarker.jpg",
     affiliateKey: "usbc_emarker",
     youtubeId: "ptlFdk37IBo",
     body: [
-      "USB-C artık her yerde: telefonlar, laptoplar, tabletler, powerbankler… Ama her USB-C kablo aynı değil. Özellikle 100W ve üstü (örneğin 140W, 240W) güç çeken cihazlarda kablonun içinde E-Marker adı verilen küçük bir çip bulunması gerekiyor. Bu çip, adaptör ile cihaz arasındaki ‘ben şu kadar gücü güvenle taşıyabilirim’ bilgisini ileten kimlik kartı gibi çalışıyor.",
-      "Basitçe söyleyelim: E-Marker çipi olmayan ucuz bir USB-C kabloyu 240W destekli bir adaptöre takarsan, iki ihtimal var: ya adaptör güvenlik nedeniyle gücü kısar ve cihaz yavaş şarj olur, ya da kablo sınırlarının üzerinde yük biner ve ısınma, kararsızlık, hatta uzun vadede hasar riski ortaya çıkar.",
-      "USB-C E-Marker çipi, USB Power Delivery (USB-PD) protokolüyle konuşur. Adaptör, kablo ve cihaz arasında küçük bir müzakere yapılır: Hangi voltaj? Hangi amper? Maksimum kaç watt? Eğer kablonun E-Marker'ı ‘ben 240W taşıyabilirim’ diyorsa, adaptör yüksek profilleri açar. Eğer E-Marker zayıf bir profil bildiriyorsa, sistem kendini otomatik kısar.",
-      "Piyasada ‘240W destekli’ diye satılan ama içinde doğru E-Marker çipi olmayan ya da yanlış programlanmış kablolar var. Bunlar, özellikle gaming laptop, profesyonel ultrabook veya hızlı şarj destekli tabletlerde beklenenden düşük performans verir. VYNEX olarak yaptığımız testlerde, bazı kabloların etiketinde 240W yazmasına rağmen pratikte 65W üzerinde kararsız davrandığını gördük.",
-      "E-Marker kontrolü yapmanın birden fazla yolu var. En garanti yöntem, kabloyu profesyonel USB-C test cihazlarına (USB-C tester, PD analyzer) bağlayıp gerçek zamanlı PD müzakeresini okumak. İkinci yöntem, güvenilir markaların sertifikalı kablolarını tercih etmek ve mümkünse üreticinin teknik dokümanını incelemek. Üçüncü yöntem ise pratik saha testi: aynı adaptör ve aynı cihazla farklı kabloları deneyerek şarj gücünü, sıcaklığı ve kararlılığı karşılaştırmak.",
-      "Özetle: Eğer cihazın 100W ve üzeri güç çekiyorsa, kablonun sadece ‘USB-C’ olması yetmez. E-Marker çipli, üreticisi belli, mümkünse 240W desteği açıkça belirtilmiş bir kablo kullanmak gerçek performans ve güvenlik için şart. VYNEX Tech Hub’da hem laboratuvar testleriyle hem de günlük kullanım senaryolarıyla bu kabloları inceleyip sonuçları şeffaf şekilde paylaşıyoruz.",
+      "USB-C artık her yerde: telefonlar, laptoplar, tabletler, powerbankler… Ama her USB-C kablo aynı değil.",
+      "Özellikle 100W ve üzerindeki güçlerde kablonun içinde E-Marker çipi olması zorunludur.",
+      "Bu çip adaptör ile cihaz arasında güç profili müzakeresini yönetir.",
+      "240W destekli ama hatalı E-Marker çipli kablolar piyasada çok fazladır.",
+      "Profesyonel USB-PD test cihazıyla doğrulama en garantili yöntemdir.",
+      "Kısacası: yüksek güç isteyen cihazlarda E-Marker şarttır.",
     ],
   },
+
   {
-    title: "Eski Telefonu Güvenlik Kamerasına Dönüştürme",
+    title: "Eski Telefonunu Güvenlik Kamerasına Dönüştür (Ücretsiz ve Hızlı)",
     description:
-      "Kullanmadığınız akıllı telefonu ücretsiz uygulamalarla IP kamera yapın. Adım adım kurulum rehberi.",
+      "Kullanmadığın akıllı telefonu ücretsiz uygulamalarla IP kameraya dönüştürebilirsin. Adım adım kurulumu anlatıyoruz.",
     slug: "telefon-kamera-donusumu",
     category: "Pratik Çözümler",
     cover: "/covers/phone-camera.jpg",
+    youtubeId: "NQ61EF6MLk",
   },
+
   {
-    title: "USB Lehim Kalemi İncelemesi",
+    title: "USB Havya — 3 Mikro Onarım (Güvenli ve Hızlı)",
     description:
-      "Taşınabilir USB-C lehim kalemini test ettik. Güç tüketimi, performans ve pratiklik analizi.",
+      "USB ile çalışan kompakt havyayı üç farklı mikro onarımda test ediyoruz. Güç tüketimi, ısınma ve kullanım kolaylığı açıklanıyor.",
     slug: "usb-lehim-kalemi",
     category: "Aletler",
     cover: "/covers/soldering.jpg",
+    youtubeId: "EQzuF4OwjCI",
   },
+
+  {
+    title: "USB Logoları SS10/20/40 — Gerçekte Hangi Hızı Alıyorsun?",
+    description:
+      "Kablonun üstünde SS10, SS20, SS40 yazıyor ama gerçek hayatta ne hız alıyorsun? USB logolarının gerçek anlamı ve hız testleri.",
+    slug: "usb-ss10-20-40-logolari",
+    category: "USB Teknolojileri",
+    cover: "/covers/usb-ss.jpg",
+    youtubeId: "8O07GigTsBg",
+  },
+
+  {
+    title: "LDAC vs aptX Adaptive vs AAC — Hangisi Daha İyi?",
+    description:
+      "Kablosuz ses kodeklerinin teknik ve pratik farklarını karşılaştırıyoruz. Bitrate, gecikme, ses kalitesi testleri.",
+    slug: "ldac-aptx-aac-karsilastirma",
+    category: "Ses Teknolojileri",
+    cover: "/covers/audio-codecs.jpg",
+    youtubeId: "iQ7bxeTfLSc",
+  },
+
+  {
+    title: "Battery + Pen Welding? Neden Riskli ve Güvenli Alternatifler Neler?",
+    description:
+      "Kalem tipi kaynak uçlarıyla batarya üzerinde çalışmanın tehlikeleri ve güvenli seçenekler.",
+    slug: "battery-pen-welding-riskleri",
+    category: "Güvenlik",
+    cover: "/covers/battery-welding.jpg",
+    youtubeId: "7NBsQU7WOL4",
+  },
+
+  {
+    title: "USB-C Hub Neden Yavaş? 5 Gerçek Darboğaz",
+    description:
+      "USB-C hub hızlarını düşüren 5 gerçek darboğazı teknik olarak açıklıyoruz.",
+    slug: "usbc-hub-neden-yavas",
+    category: "USB Teknolojileri",
+    cover: "/covers/usb-hub.jpg",
+    youtubeId: "7TCCE6Fku4",
+  },
+
   {
     title: "HDMI Logo ve Sertifikasyon Rehberi",
     description:
@@ -50,6 +96,7 @@ export const posts = [
     category: "Standartlar",
     cover: "/covers/hdmi-cert.jpg",
   },
+
   {
     title: "PoE Sınıfları ve Güç Standartları",
     description:
@@ -59,6 +106,7 @@ export const posts = [
     cover: "/covers/poe.jpg",
     affiliateKey: "poe_switch",
   },
+
   {
     title: "Thunderbolt 4 vs USB4: Karşılaştırma",
     description:
@@ -67,10 +115,11 @@ export const posts = [
     category: "USB Teknolojileri",
     cover: "/covers/thunderbolt.jpg",
   },
+
   {
     title: "DisplayPort 2.1 UHBR Modları Açıklandı",
     description:
-      "DisplayPort 2.1'in UHBR10, UHBR13.5 ve UHBR20 modları. 16K görüntü desteği ve bandwidth hesaplamaları.",
+      "DisplayPort 2.1'in UHBR10, UHBR13.5 ve UHBR20 modları. 16K görüntü desteği ve bandwidth açıklamaları.",
     slug: "displayport-21-uhbr",
     category: "Görüntü Standartları",
     cover: "/covers/displayport.jpg",
