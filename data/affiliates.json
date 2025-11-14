@@ -1,0 +1,17 @@
+{
+  "hdmi_ultra": {
+    "title": "Ultra HDMI 2.1 Cable",
+    "url": "https://example.com/hdmi",
+    "img": "/covers/hdmi21.jpg"
+  },
+  "usbc_emarker": {
+    "title": "USB-C 240W Cable",
+    "url": "https://example.com/usbc",
+    "img": "/covers/usbc-emarker.jpg"
+  },
+  "poe_switch": {
+    "title": "PoE+ Gigabit Switch",
+    "url": "https://example.com/poe",
+    "img": "/covers/poe.jpg"
+  }
+}
