@@ -8,12 +8,15 @@ export const posts = [
     affiliateKey: "hdmi_ultra"
   },
   {
-    title: "USB-C E-Marker Teknolojisi: 240W Güç İletimi",
-    description: "E-Marker çipli USB-C kablolar nasıl çalışır? 240W hızlı şarj ve veri aktarımı için teknik detaylar.",
-    slug: "usbc-emarker-240w",
-    category: "USB Teknolojileri",
-    cover: "/covers/usbc-emarker.jpg",
-    affiliateKey: "usbc_emarker"
+    {
+  title: "USB-C E-Marker — Gizli Çip Neden Önemli?",
+  slug: "usbc-emarker-240w",
+  description: "E-Marker çipli USB-C kablolar nasıl çalışır? ...",
+  category: "USB Teknolojileri",
+  cover: "/covers/usbc-emarker.jpg",
+  youtubeId: "ptlFdk37IBo",
+},
+
   },
   {
     title: "Eski Telefonu Güvenlik Kamerasına Dönüştürme",

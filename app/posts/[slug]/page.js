@@ -15,15 +15,30 @@ export default function PostPage({ params }) {
   }
 
   return (
-    <main className="max-w-3xl mx-auto px-4 py-10">
-      <p className="text-sm text-slate-400 mb-2">{post.category}</p>
+    <main className="max-w-3xl mx-auto px-4 py-10 space-y-6">
+      <p className="text-sm text-slate-400">{post.category}</p>
 
-      <h1 className="text-3xl md:text-4xl font-bold text-slate-50 mb-4">
+      <h1 className="text-3xl md:text-4xl font-bold text-slate-50">
         {post.title}
       </h1>
 
-      {post.cover && (
-        <div className="mb-6">
+      {/* YouTube video varsa ÖNCE onu göster */}
+      {post.youtubeId && (
+        <div className="aspect-video w-full overflow-hidden rounded-xl border border-slate-800">
+          <iframe
+            src={`https://www.youtube.com/embed/${post.youtubeId}`}
+            title={post.title}
+            className="w-full h-full"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </div>
+      )}
+
+      {/* Eğer YouTube yoksa kapak görselini göster */}
+      {!post.youtubeId && post.cover && (
+        <div>
           <img
             src={post.cover}
             alt={post.title}
@@ -37,7 +52,8 @@ export default function PostPage({ params }) {
 
         <p className="mt-4 text-sm text-slate-400">
           Bu yazı VYNEX Tech Hub için hazırlanmış teknik bir özet. Çok yakında
-          her başlık için detaylı adım adım rehber metinlerini de ekleyebiliriz.
+          bu konu için detaylı adım adım rehber içeriği, tablolar ve şema
+          örnekleri de eklenecek.
         </p>
       </article>
     </main>
