@@ -31,7 +31,7 @@ export const metadata = {
   },
 };
 
-// AdSense yayıncı kimliği (senin ID'in)
+// AdSense yayıncı ID’in
 const ADSENSE_ID = "ca-pub-1148906273422150";
 
 export default function RootLayout({ children }) {
