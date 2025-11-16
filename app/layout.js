@@ -39,15 +39,14 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="tr">
-      <head>
+      <body className="bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-900 selection:bg-[#D4AF37]/30 antialiased">
         <Script
           id="adsense-init"
           async
+          strategy="afterInteractive"
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
           crossOrigin="anonymous"
         />
-      </head>
-      <body className="bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-900 selection:bg-[#D4AF37]/30 antialiased">
         {children}
       </body>
     </html>
