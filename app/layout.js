@@ -27,14 +27,12 @@ export const metadata = {
     card: "summary_large_image",
     images: ["/og.jpg"],
   },
-  // İstersen burada Google Search Console doğrulama kodunu da tutabilirsin
   verification: {
     google: "V0Sy91dpRxxt_ZJ1Nxw1VOGqUW6L5Y6edZ0cLknI3pQ",
   },
 };
 
 export default function RootLayout({ children }) {
-  // İstersen ileride ENV ile override edebil diye bırakalım:
   const adsenseId =
     process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID ||
     "ca-pub-1148906273422150";
@@ -42,7 +40,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="tr">
       <head>
-        {/* Google AdSense script */}
         <Script
           id="adsense-init"
           async
