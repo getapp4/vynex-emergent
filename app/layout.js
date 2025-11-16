@@ -18,7 +18,7 @@ export const metadata = {
   description:
     "USB, HDMI, DisplayPort, PoE, Thunderbolt ve bağlantı teknolojileri üzerine teknik rehberler, incelemeler ve gerçek testler.",
   openGraph: {
-    title: "VYNEX Tech Hub",
+    title: "VYNEX Tech Hub - Teknoloji Rehberleri",
     description:
       "USB, HDMI, DisplayPort, PoE, Thunderbolt ve bağlantı teknolojileri üzerine teknik rehberler, incelemeler ve gerçek testler.",
     url: "/",
@@ -27,7 +27,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "VYNEX Tech Hub",
+    title: "VYNEX Tech Hub - Teknoloji Rehberleri",
     description:
       "USB, HDMI, DisplayPort, PoE, Thunderbolt ve bağlantı teknolojileri üzerine teknik rehberler, incelemeler ve gerçek testler.",
     images: ["/og.jpg"],
