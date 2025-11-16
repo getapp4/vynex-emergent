@@ -32,18 +32,15 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID;
-
   return (
     <html lang="tr">
       <head>
-        {adsenseId && (
-          <script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
-            crossOrigin="anonymous"
-          ></script>
-        )}
+        {/* Google AdSense doğrulama scripti */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1148906273422150"
+          crossOrigin="anonymous"
+        ></script>
       </head>
       <body className="bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-900 selection:bg-[#D4AF37]/30 antialiased">
         {children}
