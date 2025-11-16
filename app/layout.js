@@ -1,44 +1,54 @@
-import './globals.css';
+import "./globals.css";
+import Script from "next/script";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 
-  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://example.com');
+const baseUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "https://vynex.tech");
 
 export const metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'VYNEX Tech Hub - Teknoloji Rehberleri',
-    template: '%s | VYNEX Tech Hub'
+    default: "VYNEX Tech Hub - Teknoloji Rehberleri",
+    template: "%s | VYNEX Tech Hub",
   },
-  description: 'Teknoloji rehberleri: HDMI 2.1, USB-C E-Marker ve pratik çözümler.',
+  description:
+    "Teknoloji rehberleri: HDMI 2.1, USB-C E-Marker ve pratik çözümler.",
   openGraph: {
-    title: 'VYNEX Tech Hub',
-    description: 'Teknoloji rehberleri: HDMI 2.1, USB-C E-Marker ve pratik çözümler.',
-    type: 'website',
-    url: '/',
-    images: ['/og.jpg']
+    title: "VYNEX Tech Hub",
+    description:
+      "Teknoloji rehberleri: HDMI 2.1, USB-C E-Marker ve pratik çözümler.",
+    type: "website",
+    url: "/",
+    images: ["/og.jpg"],
   },
   twitter: {
-    card: 'summary_large_image',
-    images: ['/og.jpg']
+    card: "summary_large_image",
+    images: ["/og.jpg"],
   },
+  // İstersen burada Google Search Console doğrulama kodunu da tutabilirsin
   verification: {
-    google: 'V0Sy91dpRxxt_ZJ1Nxw1VOGqUW6L5Y6edZ0cLknI3pQ'
-  }
+    google: "V0Sy91dpRxxt_ZJ1Nxw1VOGqUW6L5Y6edZ0cLknI3pQ",
+  },
 };
 
 export default function RootLayout({ children }) {
-  const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID;
+  // İstersen ileride ENV ile override edebil diye bırakalım:
+  const adsenseId =
+    process.env.NEXT_PUBLIC_ADSENSE_PUBLISHER_ID ||
+    "ca-pub-1148906273422150";
 
   return (
     <html lang="tr">
       <head>
-        {adsenseId && (
-          <script
-            async
-            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
-            crossOrigin="anonymous"
-          ></script>
-        )}
+        {/* Google AdSense script */}
+        <Script
+          id="adsense-init"
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
+          crossOrigin="anonymous"
+        />
       </head>
       <body className="bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-900 selection:bg-[#D4AF37]/30 antialiased">
         {children}
