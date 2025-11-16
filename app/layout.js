@@ -1,53 +1,41 @@
 import "./globals.css";
-
-const baseUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ||
-  (process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "https://vynex.tech");
-
-export const metadata = {
-  metadataBase: new URL(baseUrl),
-  title: {
-    default: "VYNEX Tech Hub - Teknoloji Rehberleri",
-    template: "%s | VYNEX Tech Hub",
-  },
-  description:
-    "Teknoloji rehberleri: HDMI 2.1, USB-C E-Marker ve pratik çözümler.",
-  openGraph: {
-    title: "VYNEX Tech Hub",
-    description:
-      "Teknoloji rehberleri: HDMI 2.1, USB-C E-Marker ve pratik çözümler.",
-    type: "website",
-    url: "/",
-    images: ["/og.jpg"],
-  },
-  twitter: {
-    card: "summary_large_image",
-    images: ["/og.jpg"],
-  },
-  verification: {
-    google: "V0Sy91dpRxxt_ZJ1Nxw1VOGqUW6L5Y6edZ0cLknI3pQ",
-  },
-};
+import Script from "next/script";
 
 const ADSENSE_ID = "ca-pub-1148906273422150";
+
+export const metadata = {
+  title: "VYNEX Tech Hub",
+  description:
+    "USB, HDMI, DisplayPort, PoE, Thunderbolt ve bağlantı teknolojileri üzerine teknik rehberler, incelemeler ve gerçek testler.",
+  keywords: [
+    "USB-C",
+    "HDMI",
+    "DisplayPort",
+    "PoE",
+    "Thunderbolt",
+    "kablo rehberi",
+    "teknik inceleme",
+  ],
+};
 
 export default function RootLayout({ children }) {
   return (
     <html lang="tr">
       <head>
+        {/* AdSense meta tag */}
         <meta name="google-adsense-account" content={ADSENSE_ID} />
-        <script
+
+        {/* AdSense script */}
+        <Script
+          id="adsense-script"
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
           crossOrigin="anonymous"
-        ></script>
+        />
       </head>
-      <body className="bg-gradient-to-b from-slate-50 via-white to-slate-50 text-slate-900 selection:bg-[#D4AF37]/30 antialiased">
+      <body className="bg-slate-950 text-slate-50">
         {children}
       </body>
     </html>
   );
 }
-
