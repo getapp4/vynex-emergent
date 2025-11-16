@@ -31,6 +31,7 @@ export const metadata = {
   },
 };
 
+// AdSense yayıncı kimliği (senin ID'in)
 const ADSENSE_ID = "ca-pub-1148906273422150";
 
 export default function RootLayout({ children }) {
@@ -38,10 +39,7 @@ export default function RootLayout({ children }) {
     <html lang="tr">
       <head>
         {/* AdSense meta tag */}
-        <meta
-          name="google-adsense-account"
-          content={ADSENSE_ID}
-        />
+        <meta name="google-adsense-account" content={ADSENSE_ID} />
 
         {/* AdSense script */}
         <script
