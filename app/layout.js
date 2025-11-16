@@ -31,17 +31,13 @@ export const metadata = {
   },
 };
 
-// AdSense yayıncı ID’in
 const ADSENSE_ID = "ca-pub-1148906273422150";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="tr">
       <head>
-        {/* AdSense meta tag */}
         <meta name="google-adsense-account" content={ADSENSE_ID} />
-
-        {/* AdSense script */}
         <script
           async
           src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_ID}`}
@@ -54,3 +50,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
